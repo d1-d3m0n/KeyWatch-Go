@@ -20,33 +20,26 @@ Prerequisites:
 Go installed (v1.18+ recommended)
 
 1. Clone the repository
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/KeyWatch-Go.git
-cd KeyWatch-Go
+`git clone https://github.com/yourusername/KeyWatch-Go.git`
+`cd KeyWatch-Go`
 2. Run the Go server
-bash
-Copy
-Edit
-go run main.go -listen-addr="127.0.0.1:8080" -ws-addr="127.0.0.1:8080"
+`go run main.go -listen-addr="127.0.0.1:8080" -ws-addr="127.0.0.1:8080"`
 This starts:
 
-The HTML frontend at http://127.0.0.1:8080
+The HTML frontend at
+`http://127.0.0.1:8080`
 
-The JavaScript logger at http://127.0.0.1:8080/k.js
+The JavaScript logger at 
+`http://127.0.0.1:8080/k.js`
 
 WebSocket endpoint at /ws
 
 3. Open the login form
 Navigate to:
-http://127.0.0.1:8080
+`http://127.0.0.1:8080`
 Start typing into the form or anywhere on the page — keystrokes will be logged to keystrokes.log.
 
 📁 File Structure
-graphql
-Copy
-Edit
 KeyWatch-Go/
 ├── main.go            # Go server logic
 ├── logger.js          # JavaScript for capturing keystrokes
