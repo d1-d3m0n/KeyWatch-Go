@@ -36,6 +36,9 @@ go run main.go -listen-addr="127.0.0.1:8080" -ws-addr="127.0.0.1:8080"
 ```bash
 http://127.0.0.1:8080
 ```
+## 🖼️ Frontend Preview
+![KeyWatch-Go Login Page](assets/keylogger.png)
+
 ### 📁 File Structure
 ```bash
 KeyWatch-Go/
@@ -46,3 +49,7 @@ KeyWatch-Go/
 │   └── styles.css     # Page styling
 ├── keystrokes.log     # Generated log file
 ```
+### ⚠️ Disclaimer
+This tool is for educational purposes only.
+Do not use it on websites or systems you do not own or have explicit permission to test. Unauthorized use may violate laws or platform policies.
+
