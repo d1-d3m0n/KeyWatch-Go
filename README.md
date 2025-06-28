@@ -1,32 +1,59 @@
-# 🔍 KeyWatch-Go (Educational Tool)
+🔐 KeyWatch-Go
+KeyWatch-Go is a real-time keystroke logger built with Go and WebSockets, designed strictly for educational and ethical security research purposes.
 
-> ⚠️ **Disclaimer**: This project is created strictly for **educational and ethical testing purposes only**. Do not deploy or use it on systems you do not own or have explicit permission to test. Misuse of this tool may violate privacy laws and terms of service.
+This project demonstrates how JavaScript can capture user keystrokes from a browser and send them to a Go backend using WebSockets. It also classifies whether the keystrokes are entered within form fields or elsewhere on the page—useful for simulating phishing pages or honeypots in controlled environments.
 
----
+🚀 Features
+📡 Real-time keystroke capture using WebSockets
 
-## 🧠 Overview
+🧠 Classifies input as form or other
 
-This project demonstrates how a **web-based keystroke logger** can be implemented using:
+🕒 Session-based logging with timestamps
 
-- **Go (Golang)** as the backend server
-- **WebSockets** for real-time keystroke delivery
-- **JavaScript** for browser-side event capture
-- **HTML/CSS** for a realistic login form interface
+💻 Clean login page styled with HTML & CSS
 
-It is designed to simulate a scenario for learning how client-side data can be captured and sent to a backend service.
+💾 Logs saved to keystrokes.log file
 
----
+⚙️ How to Run Locally
+Prerequisites:
 
-## 🚀 Features
+Go installed (v1.18+ recommended)
 
-- 📡 Real-time keystroke capture via WebSockets
-- 🔐 Differentiates between **form input** and **random keystrokes**
-- 📝 Logs keystrokes along with timestamp and input source (form/other)
-- 🌐 Realistic fake login page with styled UI
-- 🧩 Session-based logging with timestamps and durations
-- 💾 Saves all captured data to a `keystrokes.log` file
+1. Clone the repository
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/KeyWatch-Go.git
+cd KeyWatch-Go
+2. Run the Go server
+bash
+Copy
+Edit
+go run main.go -listen-addr="127.0.0.1:8080" -ws-addr="127.0.0.1:8080"
+This starts:
 
----
+The HTML frontend at http://127.0.0.1:8080
 
-## 📁 Folder Structure
+The JavaScript logger at http://127.0.0.1:8080/k.js
 
+WebSocket endpoint at /ws
+
+3. Open the login form
+Navigate to:
+http://127.0.0.1:8080
+Start typing into the form or anywhere on the page — keystrokes will be logged to keystrokes.log.
+
+📁 File Structure
+graphql
+Copy
+Edit
+KeyWatch-Go/
+├── main.go            # Go server logic
+├── logger.js          # JavaScript for capturing keystrokes
+├── static/
+│   ├── form.html      # Main HTML form page
+│   └── styles.css     # Page styling
+├── keystrokes.log     # Generated log file
+⚠️ Disclaimer
+This tool is for educational purposes only.
+Do not use it on websites or systems you do not own or have explicit permission to test. Unauthorized use may violate laws or platform policies.
